@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "b5a8a8221188a6f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4964d534c6afc94a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14efd8f25caca5f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "eeec5f96b56d0446",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "test"
+            }
+          },
+          {
+            "id": "58c3ac2862d53893",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "test"
+            }
+          },
+          {
+            "id": "8efd87dd4d600dda",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "public/favicon/favicon-light-192.png"
+              },
+              "icon": "lucide-image",
+              "title": "favicon-light-192"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bdd3303f979d0224",
+    "type": "split",
+    "children": [
+      {
+        "id": "cc785c35c5340110",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ddbc7721affd09dd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "4b41155d85e62719",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "dc342b3dadc58a15",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "275b0b5753aabb62",
+    "type": "split",
+    "children": [
+      {
+        "id": "2153c67927fcdb49",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a106bfe1b4d0ece4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "src/content/posts/First.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "First 的反向链接列表"
+            }
+          },
+          {
+            "id": "12dc15d28abf6bfb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "src/content/posts/First.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "First 的出链列表"
+            }
+          },
+          {
+            "id": "2f1df99a4705b455",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "bf1c09af58ed3827",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "src/content/posts/First.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "First 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false,
+      "random-note:开始漫游笔记": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "58c3ac2862d53893",
+  "lastOpenFiles": [
+    "test-2.md",
+    "test.md",
+    "public/favicon/favicon-light-192.png",
+    "README.md",
+    "firefly.png",
+    "src/content/spec/friends.md",
+    "src/content/spec/about.md",
+    "src/content/posts/First.md",
+    "public/assets/images/d1.webp",
+    "public/favicon/favicon-light-180.png",
+    "public/favicon/favicon-light-128.png",
+    "public/favicon/favicon-light-32.png",
+    "public/favicon/favicon-dark-180.png",
+    "public/favicon/favicon-dark-128.png",
+    "public/favicon/favicon-dark-32.png",
+    "src/pages/font-test.md",
+    "2025-01-20.md",
+    "src/content/posts/markdown-tutorial.md",
+    "src/content/posts/markdown-extended.md",
+    "src/content/posts/code-examples.md",
+    "src/content/posts/draft.md",
+    "src/content/posts/guide/index.md",
+    "src/content/posts/guide/cover.webp",
+    "src/content/posts/markdown-mermaid.md",
+    "2024-11-29.md"
+  ]
+}

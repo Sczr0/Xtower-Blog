@@ -20,11 +20,11 @@ import { fontConfig } from "./config/fontConfig";
 const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
-  title: "Firefly",
+  title: "Evernight",
   subtitle: "Demo site",
   keywords: [
-    "Firefly",
-    "Fuwari",
+    "弦塔",
+    "Evernight",
     "Astro",
     "ACGN",
     "博客",
@@ -35,7 +35,7 @@ export const siteConfig: SiteConfig = {
   lang: SITE_LANG,
 
   themeColor: {
-    hue: 155, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
+    hue: 255, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
     fixed: false, // 对访问者隐藏主题色选择器
     defaultMode: "system", // 默认模式："light" 浅色，"dark" 深色，"system" 跟随系统
   },
@@ -56,7 +56,7 @@ export const siteConfig: SiteConfig = {
   // { type: "image", value: "https://example.com/logo.png", alt: "Firefly Logo" }
   logoIcon: {
     type: "image",
-    value: "/assets/images/LiuYingPure3.svg",
+    value: "/assets/images/icon.png",
     alt: "🍀",
   },
 
@@ -96,15 +96,10 @@ export const siteConfig: SiteConfig = {
         // 主页显示自定义文本（全局开关）
         enable: true,
         // 主页横幅主标题
-        title: "Lovely firefly!",
+        title: "Evernight",
         // 主页横幅副标题
         subtitle: [
-          "In Reddened Chrysalis, I Once Rest",
-          "From Shattered Sky, I Free Fall",
-          "Amidst Silenced Stars, I Deep Sleep",
-          "Upon Lighted Fyrefly, I Soon Gaze",
-          "From Undreamt Night, I Thence Shine",
-          "In Finalized Morrow, I Full Bloom",
+          "「再见，然后永别劣等感」",
         ],
         typewriter: {
           enable: true, // 启用副标题打字机效果
@@ -119,12 +114,12 @@ export const siteConfig: SiteConfig = {
           mobile: false, // 移动端显示横幅图片来源文本
         },
         text: {
-          desktop: "晚晚喵", // 桌面端要显示的来源文本
-          mobile: "Mobile Credit", // 移动端要显示的来源文本
+          desktop: "长夜月门", // 桌面端要显示的来源文本
+          mobile: "长夜月", // 移动端要显示的来源文本
         },
         url: {
-          desktop: "https://www.pixiv.net/artworks/135490046", // 桌面端原始艺术品或艺术家页面的 URL 链接
-          mobile: "", // 移动端原始艺术品或艺术家页面的 URL 链接
+          desktop: "https://x.com/ment502/status/1970738334784987565", // 桌面端原始艺术品或艺术家页面的 URL 链接
+          mobile: "https://www.pixiv.net/artworks/135820216", // 移动端原始艺术品或艺术家页面的 URL 链接
         },
       },
       navbar: {
@@ -161,18 +156,18 @@ export const siteConfig: SiteConfig = {
 
 export const profileConfig: ProfileConfig = {
   avatar: "/assets/images/avatar.webp",
-  name: "Firefly",
-  bio: "Hello, I'm Firefly.",
+  name: "Xtower",
+  bio: "Hello, I'm Xtower.",
   links: [
     {
       name: "Bilibli",
       icon: "fa6-brands:bilibili",
-      url: "https://space.bilibili.com/38932988",
+      url: "https://space.bilibili.com/398343999",
     },
     {
       name: "GitHub",
       icon: "fa6-brands:github",
-      url: "https://github.com/CuteLeaf",
+      url: "https://github.com/Sczr0",
     },
   ],
 };
