@@ -7,15 +7,15 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
   title: "Evernight",
-  subtitle: "Demo site",
-  site_url: "https://firefly.cuteleaf.cn",
+  subtitle: "Demiurge",
+  site_url: "https://blog.xtower.site",
   description: "Evernight 个人博客站点，使用 Astro 构建。",
-  keywords: ["弦塔", "Evernight", "Astro", "ACGN", "博客", "技术博客", "静态博客"],
+  keywords: ["弦塔", "Evernight", "Astro", "ACGN", "博客", "静态博客"],
 
   lang: SITE_LANG,
 
   themeColor: {
-    hue: 255, // 主题色默认色相，0-360
+    hue: 360, // 主题色默认色相，0-360
     fixed: false, // 是否隐藏主题色选择器
     defaultMode: "system", // 默认模式：light/dark/system
   },
@@ -38,7 +38,7 @@ export const siteConfig: SiteConfig = {
   navbarTitle: "Evernight",
 
   // 站点开始日期，用于统计运行天数
-  siteStartDate: "2025-01-01",
+  siteStartDate: "2025-11-21",
 
   // 追番配置
   bangumi: {
@@ -92,7 +92,7 @@ export const siteConfig: SiteConfig = {
       credit: {
         enable: {
           desktop: true,
-          mobile: false,
+          mobile: true,
         },
         text: {
           desktop: "长夜月门",

@@ -21,7 +21,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
     type: "playlist",
 
     // 歌单/专辑/单曲 ID 或搜索关键词
-    id: "10046455237", // 网易云音乐歌单ID示例
+    id: "17462462467", // 网易云音乐歌单ID示例
 
     // 认证 token（可选）
     auth: "",
@@ -55,7 +55,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
   // APlayer 配置选项
   player: {
     // 是否自动播放  浏览器可能会阻止，需用户交互一次网页后才自动播放
-    autoplay: false,
+    autoplay: true,
 
     // 主题色
     theme: "var(--btn-regular-bg)",
@@ -64,7 +64,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
     loop: "all",
 
     // 播放顺序：'list'=列表顺序, 'random'=随机播放
-    order: "list",
+    order: "random",
 
     // 预加载：'none'=不预加载, 'metadata'=预加载元数据, 'auto'=自动
     preload: "auto",
@@ -76,7 +76,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
     mutex: true,
 
     // local歌词类型：0=不显示, 1=显示（需要提供 lrc 字段）, 2=显示（从 HTML 内容读取）
-    lrcType: 1,
+    lrcType: 2,
 
     // 歌词是否默认隐藏（当 lrcType 不为 0 时，可以通过此选项控制初始显示状态）
     // true=默认隐藏（用户可以通过歌词按钮手动显示）, false=默认显示
