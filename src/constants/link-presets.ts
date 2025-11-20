@@ -23,25 +23,19 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
     url: "/friends/",
     icon: "material-symbols:group",
   },
-  [LinkPreset.Anime]: {
-    name: i18n(I18nKey.anime),
-    url: "/anime/",
+  [LinkPreset.Sponsor]: {
+    name: i18n(I18nKey.sponsor),
+    url: "/sponsor/",
+    icon: "material-symbols:favorite",
+  },
+  [LinkPreset.Guestbook]: {
+    name: i18n(I18nKey.guestbook),
+    url: "/guestbook/",
+    icon: "material-symbols:chat",
+  },
+  [LinkPreset.Bangumi]: {
+    name: i18n(I18nKey.bangumi),
+    url: "/bangumi/",
     icon: "material-symbols:movie",
-  },
-
-  [LinkPreset.Projects]: {
-    name: i18n(I18nKey.projects),
-    url: "/projects/",
-    icon: "material-symbols:work",
-  },
-  [LinkPreset.Skills]: {
-    name: i18n(I18nKey.skills),
-    url: "/skills/",
-    icon: "material-symbols:psychology",
-  },
-  [LinkPreset.Timeline]: {
-    name: i18n(I18nKey.timeline),
-    url: "/timeline/",
-    icon: "material-symbols:timeline",
   },
 };

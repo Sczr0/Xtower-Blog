@@ -15,7 +15,7 @@ import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
-import { expressiveCodeConfig } from "./src/config.ts";
+import { expressiveCodeConfig, siteConfig } from "./src/config";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
@@ -25,9 +25,11 @@ import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
+import mdx from "@astrojs/mdx";
+import searchIndexer from "./src/integrations/searchIndex.mts";
 // https://astro.build/config
 export default defineConfig({
-	site: "https://demo-firefly.netlify.app/",
+	site: siteConfig.site_url,
 
 	base: "/",
 	trailingSlash: "always",
@@ -41,9 +43,9 @@ export default defineConfig({
 			// the default value `transition-` cause transition delay
 			// when the Tailwind class `transition-all` is used
 			containers: ["main"],
-			smoothScrolling: false, // 禁用平滑滚动以提升性能，避免与锚点导航冲突
+			smoothScrolling: false,
 			cache: true,
-			preload: false, // 禁用预加载以减少网络请求
+			preload: false,
 			accessibility: true,
 			updateHead: true,
 			updateBodyClass: false,
@@ -66,15 +68,17 @@ export default defineConfig({
 			},
 		}),
 		expressiveCode({
-			themes: [expressiveCodeConfig.theme, expressiveCodeConfig.theme],
+			themes: [expressiveCodeConfig.darkTheme, expressiveCodeConfig.lightTheme],
+			useDarkModeMediaQuery: false,
+			themeCssSelector: (theme) => `[data-theme='${theme.name}']`,
 			plugins: [
 				pluginCollapsibleSections(),
 				pluginLineNumbers(),
-				pluginLanguageBadge(),
+				// pluginLanguageBadge(),
 				pluginCustomCopyButton(),
 			],
 			defaultProps: {
-				wrap: true,
+				wrap: false,
 				overridesByLang: {
 					shellsession: {
 						showLineNumbers: false,
@@ -82,23 +86,12 @@ export default defineConfig({
 				},
 			},
 			styleOverrides: {
-				codeBackground: "var(--codeblock-bg)",
 				borderRadius: "0.75rem",
-				borderColor: "none",
 				codeFontSize: "0.875rem",
 				codeFontFamily:
 					"'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
 				codeLineHeight: "1.5rem",
 				frames: {
-					editorBackground: "var(--codeblock-bg)",
-					terminalBackground: "var(--codeblock-bg)",
-					terminalTitlebarBackground: "var(--codeblock-topbar-bg)",
-					editorTabBarBackground: "var(--codeblock-topbar-bg)",
-					editorActiveTabBackground: "none",
-					editorActiveTabIndicatorBottomColor: "var(--primary)",
-					editorActiveTabIndicatorTopColor: "none",
-					editorTabBarBorderBottomColor: "var(--codeblock-topbar-bg)",
-					terminalTitlebarBorderBottomColor: "none",
 				},
 				textMarkers: {
 					delHue: 0,
@@ -111,7 +104,31 @@ export default defineConfig({
 			},
 		}),
 		svelte(),
-		sitemap(),
+		sitemap({
+			filter: (page) => {
+				// 根据页面开关配置过滤sitemap
+				const url = new URL(page);
+				const pathname = url.pathname;
+
+				// 检查各个页面是否启用
+				if (pathname === '/anime/' && !siteConfig.pages.anime) {
+					return false;
+				}
+				if (pathname === '/sponsor/' && !siteConfig.pages.sponsor) {
+					return false;
+				}
+				if (pathname === '/guestbook/' && !siteConfig.pages.guestbook) {
+					return false;
+				}
+				if (pathname === '/bangumi/' && !siteConfig.pages.bangumi) {
+					return false;
+				}
+
+				return true;
+			},
+		}),
+    searchIndexer(),
+    mdx()
 	],
 	markdown: {
 		remarkPlugins: [

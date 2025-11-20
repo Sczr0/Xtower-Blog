@@ -1,5 +1,5 @@
 ---
-import path from "node:path";
+import * as path from "node:path";
 
 interface Props {
 	id?: string;
@@ -11,7 +11,7 @@ interface Props {
 }
 
 import { Image } from "astro:assets";
-import { url } from "../../utils/url-utils";
+import { url } from "@/utils/url-utils";
 
 const { id, src, alt, position = "center", basePath = "/" } = Astro.props;
 const className = Astro.props.class;
@@ -45,8 +45,7 @@ if (isLocal) {
 }
 
 const imageClass = "w-full h-full object-cover";
-// 支持所有 CSS object-position 值
-const imageStyle = `object-position: ${position || 'center'}`;
+const imageStyle = `object-position: ${position}`;
 ---
 <div id={id} class:list={[className, 'overflow-hidden relative']}>
     <div class="transition absolute inset-0 dark:bg-black/10 bg-opacity-50 pointer-events-none"></div>

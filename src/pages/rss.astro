@@ -3,8 +3,8 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPosts } from "@utils/content-utils";
 import { formatDateToYYYYMMDD } from "@utils/date-utils";
 import { Icon } from "astro-icon/components";
-import I18nKey from "../i18n/i18nKey";
-import { i18n } from "../i18n/translation";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
 
 const posts = await getSortedPosts();
 const recentPosts = posts.slice(0, 6);
@@ -27,7 +27,7 @@ const recentPosts = posts.slice(0, 6);
 
         <!-- RSS 链接复制区域 -->
         <div class="card-base rounded-[var(--radius-large)] p-6 mb-6">
-            <div class="flex items-center justify-between flex-wrap gap-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div class="flex items-center">
                     <div class="w-12 h-12 bg-[var(--primary)] rounded-xl flex items-center justify-center mr-4">
                         <Icon name="material-symbols:link" class="text-white text-xl" />
@@ -37,14 +37,16 @@ const recentPosts = posts.slice(0, 6);
                         <p class="text-sm text-75">{i18n(I18nKey.rssCopyToReader)}</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <code class="bg-[var(--card-bg)] px-3 py-2 rounded-lg text-sm font-mono text-75 border border-[var(--line-divider)]">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                    <code class="bg-[var(--card-bg)] px-3 py-2 rounded-lg text-sm font-mono text-75 border border-[var(--line-divider)] break-all">
                         {Astro.site}rss.xml
                     </code>
                     <button 
                         id="copy-rss-btn"
-                        class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:opacity-80 transition-all duration-200 font-medium text-sm"
+                        class="px-4 py-2 bg-[var(--primary)] text-white rounded-lg hover:opacity-80 transition-all duration-200 font-medium text-sm whitespace-nowrap"
                         data-url={`${Astro.site}rss.xml`}
+                        data-copied-text={i18n(I18nKey.rssCopied)}
+                        data-failed-text={i18n(I18nKey.rssCopyFailed)}
                     >
                         {i18n(I18nKey.rssCopyLink)}
                     </button>
@@ -62,7 +64,7 @@ const recentPosts = posts.slice(0, 6);
                 {recentPosts.map((post) => (
                     <article class="bg-[var(--card-bg)] rounded-xl p-4 border border-[var(--line-divider)] hover:border-[var(--primary)] transition-all duration-300">
                         <h3 class="text-lg font-semibold text-90 mb-2 hover:text-[var(--primary)] transition-colors">
-                            <a href={`/posts/${post.slug}/`} class="hover:underline">
+                            <a href={`/posts/${post.id}/`} class="hover:underline">
                                 {post.data.title}
                             </a>
                         </h3>
@@ -105,32 +107,53 @@ const recentPosts = posts.slice(0, 6);
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        function initRssCopy() {
             const copyBtn = document.getElementById('copy-rss-btn');
-            if (copyBtn) {
-                copyBtn.addEventListener('click', async function() {
-                    const url = this.getAttribute('data-url');
-                    if (!url) return;
-                    try {
-                        await navigator.clipboard.writeText(url);
-                        const originalText = this.textContent || i18n.RSS.copyLink;
-                        this.textContent = i18n.RSS.copied;
-                        this.style.backgroundColor = 'var(--success-color, #10b981)';
-                        
-                        setTimeout(() => {
-                            this.textContent = originalText;
-                            this.style.backgroundColor = '';
-                        }, 2000);
-                    } catch (err) {
-                        console.error('复制失败:', err);
-                        const originalText = this.textContent || i18n.RSS.copyLink;
-                        this.textContent = i18n.RSS.copyFailed;
-                        setTimeout(() => {
-                            this.textContent = originalText;
-                        }, 2000);
-                    }
-                });
-            }
-        });
+            if (!copyBtn) return;
+            
+            // 移除旧的事件监听器（通过克隆节点的方式）
+            const newBtn = copyBtn.cloneNode(true);
+            copyBtn.parentNode?.replaceChild(newBtn, copyBtn);
+            
+            // 绑定新的事件监听器
+            newBtn.addEventListener('click', async function() {
+                const url = this.getAttribute('data-url');
+                if (!url) return;
+                try {
+                    await navigator.clipboard.writeText(url);
+                    const originalText = this.textContent;
+                    this.textContent = this.getAttribute('data-copied-text') || '';
+                    this.style.backgroundColor = 'var(--success-color, #10b981)';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.backgroundColor = '';
+                    }, 2000);
+                } catch (err) {
+                    console.error('复制失败:', err);
+                    const originalText = this.textContent;
+                    this.textContent = this.getAttribute('data-failed-text') || '';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 2000);
+                }
+            });
+        }
+        
+        // 立即初始化（支持直接访问页面和刷新）
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initRssCopy);
+        } else {
+            // DOM 已加载，直接初始化
+            setTimeout(initRssCopy, 0);
+        }
+        
+        // 支持 Swup 客户端路由（如果存在）
+        if (typeof window !== 'undefined' && (window as any).swup) {
+            (window as any).swup.hooks.on('content:replace', () => {
+                // 延迟执行以确保 DOM 已更新
+                setTimeout(initRssCopy, 100);
+            });
+        }
     </script>
 </MainGridLayout>

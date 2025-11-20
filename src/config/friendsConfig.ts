@@ -1,13 +1,16 @@
 import type { FriendLink } from "../types/config";
 
+// 可以在src/content/spec/friends.md中编写友链页面下方的自定义内容
+
 // 友链配置
 export const friendsConfig: FriendLink[] = [
   {
-    title: "Astro",
-    imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
-    desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
-    siteurl: "https://github.com/withastro/astro",
-    tags: ["Framework"],
+    title: "夏夜流萤",
+    imgurl:
+      "https://q1.qlogo.cn/g?b=qq&nk=7618557&s=640",
+    desc: "飞萤之火自无梦的长夜亮起，绽放在终竟的明天。",
+    siteurl: "https://blog.cuteleaf.cn",
+    tags: ["Blog"],
     weight: 10, // 权重，数字越大排序越靠前
     enabled: true, // 是否启用
   },
@@ -18,6 +21,15 @@ export const friendsConfig: FriendLink[] = [
     siteurl: "https://docs-firefly.cuteleaf.cn",
     tags: ["Docs"],
     weight: 9,
+    enabled: true,
+  },
+  {
+    title: "Astro",
+    imgurl: "https://avatars.githubusercontent.com/u/44914786?v=4&s=640",
+    desc: "The web framework for content-driven websites. ⭐️ Star to support our work!",
+    siteurl: "https://github.com/withastro/astro",
+    tags: ["Framework"],
+    weight: 8,
     enabled: true,
   },
 ];

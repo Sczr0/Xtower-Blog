@@ -1,5 +1,3 @@
-/* 动画增强样式 - 参考 yukina 主题优化 */
-
 /* 页面切换状态类 */
 html.is-leaving .transition-leaving {
     transform: translateY(-1rem);
@@ -206,7 +204,16 @@ html.is-entering .transition-main {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+    
+    /* 保留TOC的平滑滚动，但减少其他滚动动画 */
+    html {
         scroll-behavior: auto !important;
+    }
+    
+    /* 确保TOC组件仍然有平滑滚动 */
+    table-of-contents#toc {
+        scroll-behavior: smooth !important;
     }
 }
 
