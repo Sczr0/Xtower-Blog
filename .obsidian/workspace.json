@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.md",
+                "file": "src/content/posts/context.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test"
+              "title": "context"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/spec/about.md",
+                "file": "test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "test"
             }
           },
           {
@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -226,8 +226,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ee392dbc3cf55739",
+  "active": "eeec5f96b56d0446",
   "lastOpenFiles": [
+    "Pasted image 20251204084853.png",
+    "src/content/posts/First.md",
+    "src/content/posts/context.md",
+    "src/content/posts/images/1.webp",
+    "src/content/posts/firefly-layout-system.md",
+    "src/content/posts/firefly.md",
+    "test.md",
+    "src/content/spec/friends.md",
+    "test-2.md",
+    "src/content/spec/about.md",
+    "src/content/spec/guestbook.md",
     "dist/pagefind/index/zh-cn_92d26b8.pf_index",
     "dist/pagefind/fragment/zh-cn_b4e3de9.pf_fragment",
     "dist/pagefind/fragment/zh-cn_9e39c7e.pf_fragment",
@@ -238,7 +249,6 @@
     "dist/pagefind/pagefind.js",
     "dist/pagefind/pagefind-ui.js",
     "dist/pagefind/pagefind-ui.css",
-    "dist/pagefind/pagefind-modular-ui.js",
     "dist/_astro/d1.CYBrdtIJ_ZLaMNK.webp",
     "dist/_astro/m1.BWOm-yyD_Z44LrM.webp",
     "dist/_astro/1.DMCZXhCl.webp",
@@ -248,21 +258,12 @@
     "dist/_astro/d1.CYBrdtIJ.webp",
     "dist/_astro/both.irYNrlI2.webp",
     "dist/pio/models/spine/firefly/images/发饰3.png",
-    "dist/pio/models/spine/firefly/images/发饰2.png",
-    "src/content/spec/friends.md",
     "src/config/README.md",
-    "src/content/posts/First.md",
     "src/pages/font-test.md",
     "src/components/README.md",
-    "src/content/posts/firefly-layout-system.md",
-    "test.md",
     "public/pio/README.md",
-    "src/content/posts/firefly.md",
-    "src/content/spec/guestbook.md",
     "README.md",
     "dist/pio/README.md",
-    "test-2.md",
-    "src/content/spec/about.md",
     "verification.md",
     "2025-01-20.md",
     "src/content/posts/markdown-tutorial.md",

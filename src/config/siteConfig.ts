@@ -6,10 +6,10 @@ import { fontConfig } from "./fontConfig";
 const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
-  title: "Evernight",
+  title: "塔弦云随笔",
   subtitle: "Demiurge",
-  site_url: "https://blog.xtower.site",
-  description: "Evernight 个人博客站点，使用 Astro 构建。",
+  site_url: "https://xtower.site",
+  description: "个人博客站点，使用 Astro 构建。",
   keywords: ["弦塔", "Evernight", "Astro", "ACGN", "博客", "静态博客"],
 
   lang: SITE_LANG,
