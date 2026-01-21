@@ -228,6 +228,8 @@
   },
   "active": "58c3ac2862d53893",
   "lastOpenFiles": [
+    "public/assets/images/random-2.png",
+    "public/assets/images/random-1.png",
     "public/assets/images/Pasted image 20260121194134.png",
     "public/assets/images/Pasted image 20260121194241.png",
     "dist/pagefind/fragment/zh-cn_5ed9703.pf_fragment",
@@ -247,8 +249,6 @@
     "dist/favicon/favicon-light-180.png",
     "dist/favicon/favicon-light-128.png",
     "dist/favicon/favicon-dark-192.png",
-    "dist/favicon/favicon-dark-32.png",
-    "dist/favicon/favicon-dark-180.png",
     "dist/pio/README.md",
     "src/content/posts/First.md",
     "src/content/posts/firefly-layout-system.md",
