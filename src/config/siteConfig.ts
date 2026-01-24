@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
   title: "塔弦云随笔",
   subtitle: "Demiurge",
   site_url: "https://xtower.site",
-  description: "个人博客站点，使用 Astro 构建。",
+  description: "「如何？为你描绘的这个世界？」个人博客站点，使用 Astro 构建。",
   keywords: ["弦塔", "Evernight", "Astro", "ACGN", "博客", "静态博客"],
 
   lang: SITE_LANG,
@@ -53,9 +53,9 @@ export const siteConfig: SiteConfig = {
 
   // 页面开关：false 时会返回 404
   pages: {
-    sponsor: true,
-    guestbook: true,
-    bangumi: true,
+    sponsor: false,
+    guestbook: false,
+    bangumi: false,
   },
 
   // 文章列表布局

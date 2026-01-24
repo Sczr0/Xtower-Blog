@@ -70,7 +70,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
     preload: "auto",
 
     // 默认音量 (0-1)
-    volume: 0.7,
+    volume: 0.5,
 
     // 是否互斥播放（同时只能播放一个播放器）
     mutex: true,
