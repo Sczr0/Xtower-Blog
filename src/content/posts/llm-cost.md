@@ -120,12 +120,13 @@ licenseName: "CC BY-NC-SA 4.0"
 
 | 模型名称 | 输入价格 ($/1M Tokens) | 输出价格 ($/1M Tokens) | 说明 |
 | :--- | :--- | :--- | :--- |
-| **Claude Opus 4.5/4.6** | 5.00 (≤200K)<br>10.00 (>200K) | 25.00 (≤200K)<br>37.50 (>200K) | 缓存写入: 6.25/10.00 (5m/1h)<br>输入缓存命中: 0.50 / 1.00<br> |
-| **Claude Sonnet 4.5/4.6** | 3.00 | 15.00 | 缓存写入: 3.75/6.00 (5m/1h)<br>输入缓存命中: 0.30<br> |
+| **Claude Opus 4.5/4.6** | 5.00 (≤200K)<br>10.00 (>200K) | 25.00 (≤200K)<br>37.50 (>200K) | 缓存写入: 6.25/10.00 (5m/1h)<br>输入缓存命中: 0.50 / 1.00 |
+| **Claude Sonnet 4.5/4.6** | 3.00 | 15.00 | 缓存写入: 3.75/6.00 (5m/1h)<br>输入缓存命中: 0.30 |
 | **Claude Haiku 4.5** | 1.00 | 5.00 | 缓存写入: 1.25/2.00 (5m/1h)<br>输入缓存命中: 0.10 |
 
-1M 长上下文（Beta）仅适用于 Claude Opus 4.6、Sonnet 4.5 或 Sonnet 4 模型。
-有关长上下文（Beta）定价的具体信息请参阅 [Claude Pricing](https://platform.claude.com/docs/zh-CN/about-claude/pricing)
+> 备注：1M 长上下文（Beta）仅适用于 Claude Opus 4.6、Sonnet 4.5、Sonnet 4。  
+> 当输入 token 总量超过 200K 时，按长上下文高档费率计费。  
+> 详情参阅 [Claude Pricing](https://platform.claude.com/docs/zh-CN/about-claude/pricing)。
 
 ### Google (Gemini)
 
