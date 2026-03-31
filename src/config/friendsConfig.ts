@@ -32,6 +32,16 @@ export const friendsConfig: FriendLink[] = [
     weight: 8,
     enabled: true,
   },
+  {
+    title: "皮梦",
+    imgurl:
+      "https://thirdqq.qlogo.cn/ek_qqapp/AQBYdE3HOBBJWzCia3BjOePcJ5icmcwpTW0cEWXlZsib48hLvjwq5KYMmdBlpKtRB3cqt3Kmgfb5v69WGKRvB3Q6av6EV7Jfmc9n5SK9ZRxnAchmKJBILw/640",
+    desc: "这里是杂鱼皮梦的博客！",
+    siteurl: "https://blog.07210700.xyz",
+    tags: ["Blog"],
+    weight: 7,
+    enabled: true,
+  },
 ];
 
 // 获取启用的友链并按权重排序
