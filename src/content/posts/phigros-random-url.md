@@ -50,9 +50,9 @@ https://github.com/Sczr0/somnia-xtower/blob/main/generate_index.py
 
 免费版套餐不支持 matches 正则表达式来做复杂的匹配，uuidv4 也只能用一次，且不能嵌套，所以使用了 cf.ray_id lt "e" + 多条规则，相当别扭
 
-![这是第一条](public/assets/images/random-1.png)
+![这是第一条](/assets/images/random-1.png)
 
-![这是第二条](public/assets/images/random-2.png)
+![这是第二条](/assets/images/random-2.png)
 
 效果：
 https://random.xtower.site/ill

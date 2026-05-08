@@ -1,27 +1,36 @@
 /// <reference types="astro/client" />
 /// <reference path="../.astro/types.d.ts" />
 
-interface ImportMetaEnv {
-  readonly MEILI_MASTER_KEY: string;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
-
-// TOC 相关的全局类型声明
 declare global {
-  interface Window {
-    SidebarTOC: {
-      manager: any;
-    };
-    FloatingTOC: {
-      btn: HTMLElement | null;
-      panel: HTMLElement | null;
-      manager: any;
-      isPostPage: () => boolean;
-    };
-    toggleFloatingTOC: () => void;
-    tocInternalNavigation: boolean;
-  }
+	interface ImportMetaEnv {
+		readonly MEILI_MASTER_KEY: string;
+	}
+
+	interface ITOCManager {
+		init: () => void;
+		cleanup: () => void;
+	}
+
+	interface Window {
+		SidebarTOC: {
+			manager: ITOCManager | null;
+		};
+		FloatingTOC: {
+			btn: HTMLElement | null;
+			panel: HTMLElement | null;
+			manager: ITOCManager | null;
+			isPostPage: () => boolean;
+		};
+		toggleFloatingTOC: () => void;
+		tocInternalNavigation: boolean;
+		// swup is defined in global.d.ts
+		// biome-ignore lint/suspicious/noExplicitAny: External library without types
+		spine: any;
+		closeAnnouncement: () => void;
+		// __fireflyMusic type is defined in global.d.ts
+		semifullScrollHandler?: (() => void) | undefined;
+		initSemifullScrollDetection?: () => void;
+	}
 }
+
+export {};

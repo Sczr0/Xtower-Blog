@@ -13,10 +13,10 @@ licenseName: "CC BY 4.0"
 ---
 ### 本博客部分使用图片的出处：
 
-![图片描述](public/assets/images/d1.webp)
+![图片描述](/assets/images/d1.webp)
 
 来源链接：https://x.com/ment502/status/1970738334784987565
 
-![图片描述](public/assets/images/m1.webp)
+![图片描述](/assets/images/m1.webp)
 
 来源链接：https://www.pixiv.net/artworks/135820216
