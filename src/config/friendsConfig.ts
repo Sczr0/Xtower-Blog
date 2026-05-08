@@ -14,7 +14,7 @@ export const friendsPageConfig: FriendsPageConfig = {
 	showCustomContent: true,
 
 	// 是否显示评论区，需要先在commentConfig.ts启用评论系统
-	showComment: true,
+	showComment: false,
 
 	// 是否开启随机排序配置，如果开启，就会忽略权重，构建时进行一次随机排序
 	randomizeSort: false,
@@ -39,6 +39,16 @@ export const friendsConfig: FriendLink[] = [
 		siteurl: "https://docs-firefly.cuteleaf.cn",
 		tags: ["Docs"],
 		weight: 9,
+		enabled: true,
+	},
+	{
+		title: "皮梦",
+		imgurl:
+			"https://thirdqq.qlogo.cn/ek_qqapp/AQBYdE3HOBBJWzCia3BjOePcJ5icmcwpTW0cEWXlZsib48hLvjwq5KYMmdBlpKtRB3cqt3Kmgfb5v69WGKRvB3Q6av6EV7Jfmc9n5SK9ZRxnAchmKJBILw/640",
+		desc: "这里是杂鱼皮梦的博客！",
+		siteurl: "https://blog.07210700.xyz",
+		tags: ["Blog"],
+		weight: 7,
 		enabled: true,
 	},
 	{
