@@ -66,7 +66,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				"「如何？为你描绘的这个世界？」",
 			],
 			// 主页横幅副标题字体大小
-			subtitleSize: "1.0rem",
+			subtitleSize: "1.5rem",
 			typewriter: {
 				// 是否启用打字机效果
 				// 打字机开启 → 循环显示所有副标题
