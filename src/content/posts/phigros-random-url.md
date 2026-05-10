@@ -3,7 +3,7 @@ title: 利用Cloudflare Origin Rules实现无计费的随机URL
 published: 2026-01-21
 updated: 2026-05-09
 description: 做一个随机图不是很困难，但是整活就有点困难了...
-image: ""
+image: "api"
 tags:
   - 随笔
 category: 随笔

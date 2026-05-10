@@ -3,7 +3,7 @@ title: 大模型价格列表
 published: 2026-02-08
 updated: 2026-05-09
 description: 汇总国内外主流大模型（阿里、DeepSeek、OpenAI、Gemini等）的API定价。
-image: ""
+image: "api"
 tags:
   - 随笔
 category: 随笔
